@@ -1,0 +1,30 @@
+<%- include ('Partials.ejs') %> 
+<body>
+    
+  <div class='back'>
+      
+            <div class = ' content'>
+                <%  notes.forEach((note)=>{ %> 
+                    <div class="card">
+                        <div class="card-header">
+                          Note
+                        </div>
+                        <div class="card-body">
+                          <blockquote class="blockquote mb-0">
+                            <p><%= note.content %>  </p>
+                  
+                            <footer class="blockquote-footer"><%= note.title %> <br> <span ><a href='/Notes/<%= note._id %> '><i class="fas fa-trash-alt"></i class="fas fa-trash-alt"></a></span> <br> <span><a href='/Edit/<%= note.id %> '><i class="fas fa-edit">edit</i></a></span></footer></blockquote> <cite title="Source Title"></cite></footer>
+                          </blockquote>
+                        </div>
+                      </div><br>
+                    <% }) %> 
+            </div>
+        
+            </div>
+        </div>
+        <%- include ('Navbar.ejs') %> <br>
+    
+   
+
+</body>
+</div>

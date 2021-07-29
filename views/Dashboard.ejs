@@ -1,0 +1,32 @@
+<%- include ('Partials.ejs') %> 
+<body>
+ <div class='back'>
+    <%- include ('Navbar.ejs')  %> 
+
+   <h1 style="color:white"> Welcome to Nginx. Enter a note to get started!<br>
+    <hr> </h1> 
+    <div class='div-center'>
+        <% if( Login_message.length > 0){ %> 
+            <div class="alert alert-success alert-dismissible fade show" role="alert" >
+                <%= Login_message %>  
+            </div>
+        <%  }  %> 
+        <div clas='content'>
+            <div class="form-outline">
+                <form action="/Dashboard" method ='POST'>
+                    <input class="form-control" type="text" name='title' placeholder='Enter title here'><br>
+                    <textarea class="form-control" id="textAreaExample2" name = 'content' rows="8"></textarea>
+                    <label class="form-label" for="textAreaExample2">Message</label><br> <hr />
+                    <button type="submit" class="btn btn-primary">Create Note </button>
+                    
+                </form>
+                
+           </div>
+        </div>
+        
+    </div>
+       
+  
+</div>
+
+</body>

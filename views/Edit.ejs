@@ -1,0 +1,30 @@
+<%- include ('Partials.ejs') %> 
+<body>
+ <div class='back'>
+
+    <%- include ('Navbar.ejs')  %> 
+
+   <h1 style="color:white">Enter new information here <br>
+    <hr> </h1> 
+    <span><a href='/Notes'><i class="fas fa-long-arrow-alt-left fa-2x"></i></a></span>
+    <div class='div-center'>
+     
+        <div clas='content'>
+            <div class="form-outline">
+                <form action="/Edit/<%= note._id %> " method ='POST'>
+                    <input class="form-control" type="text" name='title' placeholder='Enter new title here'><br>
+                    <textarea class="form-control" id="textAreaExample2" name = 'content' rows="8"></textarea>
+                    <label class="form-label" for="textAreaExample2">Message</label><br> <hr />
+                    <button type="submit" class="btn btn-primary">Update</button>
+                    
+                </form>
+                
+           </div>
+        </div>
+        
+    </div>
+       
+  
+</div>
+
+</body>

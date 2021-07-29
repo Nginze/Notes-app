@@ -1,0 +1,55 @@
+<%- include ('Partials.ejs') %> 
+<title> Home </title>
+<body>
+
+<div class="back">
+  <% if(!user){ %> 
+    <% if(Auth_message.length>0){%>
+     <div class="alert alert-danger alert-dismissible fade show" role="alert" >
+       <%= Auth_message %>  
+   </div>
+   <% }  %> 
+  <%  }  %> 
+  
+
+
+  <% if( Signup_message.length > 0){ %> 
+    <div class="alert alert-success alert-dismissible fade show" role="alert" >
+        <%= Signup_message %>  
+    </div>
+ <%  }  %> 
+
+  <div class="div-center">
+    
+  
+
+    <div class="content">
+
+
+      <h3>Login</h3>
+      <hr />
+      <form action = '/' method = 'POST'>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" name = 'email' placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" name = 'password' placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <hr />
+        <a href="/Signup"><button type="button" class="btn btn-link">Create an account here </button></a>
+        <!--<button type="button" class="btn btn-link">Reset Password</button> -->
+
+      </form>
+
+    </div>
+
+
+    </span>
+  </div>
+
+<h1 style="color:white"> Nginx </h1> <hr>
+        
+</body>
